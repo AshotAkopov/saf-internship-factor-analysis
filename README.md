@@ -1,60 +1,47 @@
 # Stage ISFA – Analyse factorielle avec Python
 
-Ce dépôt contient les travaux réalisés dans le cadre de mon stage de Master 1 
-en Économétrie et Statistiques à l’ISFA (Université Lyon 1), au sein du 
-Laboratoire de Sciences Actuarielles et Financières (SAF).
+Ce dépôt contient les travaux réalisés dans le cadre de mon stage de Master 1 en Économétrie et Statistiques à l’ISFA (Université Claude Bernard Lyon 1), au sein du Laboratoire de Sciences Actuarielles et Financières (SAF).
 
-## 🎯 Objectif du projet
+## Objectif
 
-L’objectif du stage est d’explorer et d’implémenter des méthodes d’analyse 
-factorielle en Python, en développant des outils complémentaires aux 
-bibliothèques existantes, notamment pour la visualisation et l’exploitation 
-des résultats.
+L’objectif de ce stage est d’explorer et d’implémenter des méthodes d’analyse factorielle en Python, en développant des outils complémentaires aux bibliothèques existantes, notamment pour la visualisation et l’exploitation des résultats.
 
-## 📂 Contenu du dépôt
+## Contenu du dépôt
 
-- `FactorAnalyz.py` : fichier principal contenant les fonctions développées
+- `FactorAnalyz.py` : fichier principal regroupant les fonctions développées
 
-## 🔬 Méthodes implémentées
+## Méthodes implémentées
 
 ### Analyse en Composantes Principales (ACP)
 
-- **Choix du nombre de composantes**
-  - Analyse parallèle de Horn
-  - Test MAP de Velicer
+Les développements autour de l’ACP portent sur :
 
-- **Extraction des résultats**
-  - `pca_results` : calcule les coordonnées, contributions et cos²
-  - `pca_top` : identifie les variables ou individus les plus influents
-
-- **Visualisation**
-  - `plot_correlation_circle` : cercle de corrélation avec filtres
+- le choix du nombre de composantes, avec l’implémentation de l’analyse parallèle de Horn et du test MAP de Velicer ;
+- l’extraction et l’organisation des résultats via la fonction `pca_results`, qui calcule les coordonnées, contributions et cos² ;
+- l’identification des variables ou individus les plus influents à l’aide de la fonction `pca_top` ;
+- la visualisation des résultats, notamment à travers une fonction de tracé du cercle de corrélation (`plot_correlation_circle`) permettant d’appliquer différents filtres.
 
 ### Analyse Factorielle Exploratoire (AFE)
 
-- Étude théorique des méthodes
-- Analyse des limites liées à la multicolinéarité
+Une étude théorique des méthodes d’analyse factorielle exploratoire a été réalisée. L’implémentation pratique a mis en évidence des limites liées à la forte multicolinéarité des données.
 
-Fonctions associées :
+Les fonctions suivantes ont été développées pour analyser cette problématique :
 
-- `corr_over_threshold` : identifie les corrélations élevées
-- `calculate_vif` : calcule le Variance Inflation Factor (VIF)
+- `corr_over_threshold` : identification des corrélations supérieures à un seuil donné ;
+- `calculate_vif` : calcul du Variance Inflation Factor (VIF) pour chaque variable.
 
-## 📊 Données
+## Données
 
-- Données de football issues des cinq grands championnats européens
-- Source : fbref.com
-- Échantillon final :
-  - 1852 joueurs
-  - 127 variables
+Les données utilisées concernent des joueurs de football issus des cinq grands championnats européens. Elles proviennent du site fbref.com.
 
-## 📌 Contexte
+Après traitement, l’échantillon final comprend 1852 individus décrits par 127 variables.
 
-Stage réalisé au laboratoire SAF, spécialisé dans l’étude des risques 
-financiers et actuariels.
+## Contexte
 
-## 👤 Auteur
+Ce travail a été réalisé au sein du Laboratoire de Sciences Actuarielles et Financières (SAF), dont les recherches portent sur l’analyse et la gestion des risques en finance et en assurance.
+
+## Auteur
 
 Ashot Akopov  
 Master 1 Économétrie et Statistiques  
-ISFA – Université Lyon 1
+ISFA – Université Claude Bernard Lyon 1
