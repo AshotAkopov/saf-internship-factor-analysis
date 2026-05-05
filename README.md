@@ -1,4 +1,57 @@
-# Stage ISFA – Analyse factorielle avec Python
+# Stage ISFA – Factor Analysis with Python
+
+This repository contains the work carried out during my first-year Master's internship in Econometrics and Statistics at ISFA (Université Claude Bernard Lyon 1), within the Laboratory of Actuarial and Financial Sciences (SAF).
+
+## Objective
+
+The aim of this internship is to explore and implement factor analysis methods in Python, by developing tools that complement existing libraries, particularly for visualization and result interpretation.
+
+## Repository content
+
+- `FactorAnalyz.py`: main file containing the implemented functions
+
+## Implemented methods
+
+### Principal Component Analysis (PCA)
+
+The developments around PCA include:
+
+- selection of the number of components using Horn’s parallel analysis and Velicer’s MAP test;
+- extraction and structuring of results using the `pca_results` function (coordinates, contributions, cos²);
+- identification of the most influential variables and individuals using `pca_top`;
+- visualization tools, including a correlation circle implemented in `plot_correlation_circle` with filtering options.
+
+### Exploratory Factor Analysis (EFA)
+
+A theoretical study of exploratory factor analysis methods was conducted.  
+The practical implementation highlighted limitations due to strong multicollinearity in the data.
+
+The following functions were developed to analyze this issue:
+
+- `corr_over_threshold`: identifies correlations above a given threshold;
+- `calculate_vif`: computes the Variance Inflation Factor (VIF) for each variable.
+
+## Data
+
+The dataset consists of football players from the five major European leagues, sourced from fbref.com.
+
+After preprocessing, the final dataset includes 1852 individuals described by 127 variables.
+
+## Context
+
+This work was carried out within the Laboratory of Actuarial and Financial Sciences (SAF), whose research focuses on risk analysis and management in finance and insurance.
+
+## Author
+
+Ashot Akopov  
+Master’s Degree in Econometrics and Statistics  
+ISFA – Université Claude Bernard Lyon 1
+
+---
+
+# Version française
+
+## Stage ISFA – Analyse factorielle avec Python
 
 Ce dépôt contient les travaux réalisés dans le cadre de mon stage de Master 1 en Économétrie et Statistiques à l’ISFA (Université Claude Bernard Lyon 1), au sein du Laboratoire de Sciences Actuarielles et Financières (SAF).
 
