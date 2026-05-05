@@ -1,5 +1,7 @@
 # Stage ISFA – Factor Analysis with Python
 
+*French version available below.*
+
 This repository contains the work carried out during my first-year Master's internship in Econometrics and Statistics at ISFA (Université Claude Bernard Lyon 1), within the Laboratory of Actuarial and Financial Sciences (SAF).
 
 ## Objective
