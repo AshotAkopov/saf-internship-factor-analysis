@@ -1,4 +1,4 @@
-# Stage ISFA – Factor Analysis with Python
+# SAF Internship – Factor Analysis with Python
 
 *French version available below.*
 
