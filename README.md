@@ -1,102 +1,219 @@
-# SAF Internship – Factor Analysis with Python
+# Factor Analysis with Python
+
+Python tools for principal component analysis (PCA), exploratory factor analysis (EFA), and multicollinearity diagnostics.
 
 *French version available below.*
 
-This repository contains the work carried out during my first-year Master's internship in Econometrics and Statistics at ISFA (Université Claude Bernard Lyon 1), within the Laboratory of Actuarial and Financial Sciences (SAF).
+---
 
-## Objective
+## Project Overview
 
-The aim of this internship is to explore and implement factor analysis methods in Python, by developing tools that complement existing libraries, particularly for visualization and result interpretation.
+This project focuses on the implementation and exploration of multivariate statistical methods in Python.
 
-## Repository content
+The objective is to develop practical tools for:
 
-- `FactorAnalyz.py`: main file containing the implemented functions
+- dimensionality reduction,
+- factor analysis,
+- PCA interpretation,
+- visualization,
+- and multicollinearity diagnostics.
 
-## Implemented methods
+The project was developed using football performance data from the five major European leagues.
+
+---
+
+## Repository Content
+
+- `factor_analysis.py`  
+  Main Python file containing the implemented functions.
+
+---
+
+## Implemented Methods
 
 ### Principal Component Analysis (PCA)
 
-The developments around PCA include:
+Implemented tools include:
 
-- selection of the number of components using Horn’s parallel analysis and Velicer’s MAP test;
-- extraction and structuring of results using the `pca_results` function (coordinates, contributions, cos²);
-- identification of the most influential variables and individuals using `pca_top`;
-- visualization tools, including a correlation circle implemented in `plot_correlation_circle` with filtering options.
+- Horn’s parallel analysis
+- Velicer’s MAP test
+- PCA result extraction
+- Variable and individual contributions
+- cos² computation
+- Correlation circle visualization
+- PCA interpretation helpers
+
+Main functions:
+
+- `pca_results`
+- `pca_top`
+- `parallel_analysis`
+- `velicer_map`
+- `plot_correlation_circle`
+
+---
 
 ### Exploratory Factor Analysis (EFA)
 
-A theoretical study of exploratory factor analysis methods was conducted.  
-The practical implementation highlighted limitations due to strong multicollinearity in the data.
+The project also explores exploratory factor analysis and multicollinearity issues.
 
-The following functions were developed to analyze this issue:
+Implemented tools:
 
-- `corr_over_threshold`: identifies correlations above a given threshold;
-- `calculate_vif`: computes the Variance Inflation Factor (VIF) for each variable.
+- Correlation threshold detection
+- Variance Inflation Factor (VIF)
+- Correlation diagnostics
+
+Main functions:
+
+- `corr_over_threshold`
+- `calculate_vif`
+
+---
 
 ## Data
 
-The dataset consists of football players from the five major European leagues, sourced from fbref.com.
+The dataset contains football players from the five major European leagues, collected from fbref.com.
 
-After preprocessing, the final dataset includes 1852 individuals described by 127 variables.
+After preprocessing:
+
+- 1852 observations
+- 127 variables
+
+---
+
+## Technologies
+
+- Python
+- pandas
+- numpy
+- matplotlib
+- scikit-learn
+- statsmodels
+
+---
 
 ## Context
 
-This work was carried out within the Laboratory of Actuarial and Financial Sciences (SAF), whose research focuses on risk analysis and management in finance and insurance.
+This project was developed during an internship at the Laboratory of Actuarial and Financial Sciences (SAF), as part of a Master's degree in Econometrics and Statistics at ISFA — Université Claude Bernard Lyon 1.
+
+The work focused on the implementation and exploration of multivariate statistical methods in Python, with an emphasis on PCA interpretation, factor analysis, and multicollinearity diagnostics.
+
+---
 
 ## Author
 
-Ashot Akopov  
+Ashot Akopov
+
 Master’s Degree in Econometrics and Statistics  
-ISFA – Université Claude Bernard Lyon 1
+ISFA — Université Claude Bernard Lyon 1
 
 ---
 
 # Version française
 
-## Stage ISFA – Analyse factorielle avec Python
+## Analyse factorielle avec Python
 
-Ce dépôt contient les travaux réalisés dans le cadre de mon stage de Master 1 en Économétrie et Statistiques à l’ISFA (Université Claude Bernard Lyon 1), au sein du Laboratoire de Sciences Actuarielles et Financières (SAF).
+Outils Python pour l’analyse en composantes principales (ACP), l’analyse factorielle exploratoire (AFE) et les diagnostics de multicolinéarité.
 
-## Objectif
+---
 
-L’objectif de ce stage est d’explorer et d’implémenter des méthodes d’analyse factorielle en Python, en développant des outils complémentaires aux bibliothèques existantes, notamment pour la visualisation et l’exploitation des résultats.
+## Présentation du projet
+
+Ce projet porte sur l’implémentation et l’exploration de méthodes statistiques multivariées en Python.
+
+L’objectif est de développer des outils pratiques pour :
+
+- la réduction de dimension,
+- l’analyse factorielle,
+- l’interprétation des ACP,
+- la visualisation,
+- et les diagnostics de multicolinéarité.
+
+Le projet a été développé à partir de données de performance de joueurs de football issus des cinq grands championnats européens.
+
+---
 
 ## Contenu du dépôt
 
-- `FactorAnalyz.py` : fichier principal regroupant les fonctions développées
+- `factor_analysis.py`  
+  Fichier principal contenant les fonctions développées.
+
+---
 
 ## Méthodes implémentées
 
 ### Analyse en Composantes Principales (ACP)
 
-Les développements autour de l’ACP portent sur :
+Outils implémentés :
 
-- le choix du nombre de composantes, avec l’implémentation de l’analyse parallèle de Horn et du test MAP de Velicer ;
-- l’extraction et l’organisation des résultats via la fonction `pca_results`, qui calcule les coordonnées, contributions et cos² ;
-- l’identification des variables ou individus les plus influents à l’aide de la fonction `pca_top` ;
-- la visualisation des résultats, notamment à travers une fonction de tracé du cercle de corrélation (`plot_correlation_circle`) permettant d’appliquer différents filtres.
+- Analyse parallèle de Horn
+- Test MAP de Velicer
+- Extraction des résultats d’ACP
+- Contributions des variables et individus
+- Calcul des cos²
+- Cercle des corrélations
+- Outils d’interprétation des ACP
+
+Fonctions principales :
+
+- `pca_results`
+- `pca_top`
+- `parallel_analysis`
+- `velicer_map`
+- `plot_correlation_circle`
+
+---
 
 ### Analyse Factorielle Exploratoire (AFE)
 
-Une étude théorique des méthodes d’analyse factorielle exploratoire a été réalisée. L’implémentation pratique a mis en évidence des limites liées à la forte multicolinéarité des données.
+Le projet explore également l’analyse factorielle exploratoire et les problèmes de multicolinéarité.
 
-Les fonctions suivantes ont été développées pour analyser cette problématique :
+Outils implémentés :
 
-- `corr_over_threshold` : identification des corrélations supérieures à un seuil donné ;
-- `calculate_vif` : calcul du Variance Inflation Factor (VIF) pour chaque variable.
+- Détection de corrélations élevées
+- Variance Inflation Factor (VIF)
+- Diagnostics de corrélation
+
+Fonctions principales :
+
+- `corr_over_threshold`
+- `calculate_vif`
+
+---
 
 ## Données
 
-Les données utilisées concernent des joueurs de football issus des cinq grands championnats européens. Elles proviennent du site fbref.com.
+Les données concernent des joueurs des cinq grands championnats européens, collectées depuis fbref.com.
 
-Après traitement, l’échantillon final comprend 1852 individus décrits par 127 variables.
+Après prétraitement :
+
+- 1852 observations
+- 127 variables
+
+---
+
+## Technologies
+
+- Python
+- pandas
+- numpy
+- matplotlib
+- scikit-learn
+- statsmodels
+
+---
 
 ## Contexte
 
-Ce travail a été réalisé au sein du Laboratoire de Sciences Actuarielles et Financières (SAF), dont les recherches portent sur l’analyse et la gestion des risques en finance et en assurance.
+Ce projet a été réalisé dans le cadre d’un stage au Laboratoire de Sciences Actuarielles et Financières (SAF), au sein du Master Économétrie et Statistiques de l’ISFA — Université Claude Bernard Lyon 1.
+
+Le travail porte sur l’implémentation et l’exploration de méthodes statistiques multivariées en Python, avec un intérêt particulier pour l’interprétation des ACP, l’analyse factorielle et les diagnostics de multicolinéarité.
+
+---
 
 ## Auteur
 
-Ashot Akopov  
-Master 1 Économétrie et Statistiques  
-ISFA – Université Claude Bernard Lyon 1
+Ashot Akopov
+
+Master Économétrie et Statistiques  
+ISFA — Université Claude Bernard Lyon 1
